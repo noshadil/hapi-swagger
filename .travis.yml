@@ -5,7 +5,9 @@ node_js:
 env:
   - HAPI=hapi@17
   - HAPI=hapi@18
+  - JOI=joi@14
+  - JOI-joi@13
 before_script:
-  - npm install --save-dev $HAPI
+  - npm install --save-dev $HAPI $JOI
 after_script:
   - "npm run test-cov-coveralls"
